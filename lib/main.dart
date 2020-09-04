@@ -26,11 +26,7 @@ class MyHomePageState extends State<MyApp> {
       body: new Column(
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(45),
-                  bottomRight: Radius.circular(45)),
-            ),
+
             height: 300,
             child: Carousel(
               dotColor:  Color(0xFFf45d27),
@@ -50,12 +46,14 @@ class MyHomePageState extends State<MyApp> {
           progress,
           text,
           Container(
+
             margin: new EdgeInsets.symmetric(horizontal: 20.0),
+
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 RaisedButton(
-                 color: Color(0xFFf45d27),
+                
                   padding: EdgeInsets.only(
                     left: 48,
                     right: 48,
@@ -65,6 +63,7 @@ class MyHomePageState extends State<MyApp> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
+
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => FormPage()));
                   },
@@ -93,6 +92,7 @@ class MyHomePageState extends State<MyApp> {
 }
 
 Widget progress = Container(
+
   padding:const EdgeInsets.all(20),
 
   child: new Center(
@@ -101,7 +101,14 @@ Widget progress = Container(
       children: <Widget>[
         Container(
 
-          color: Color(0xFFf45d27),
+
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [const Color(0xFFFF8F00), const Color(0xFFFFc107)],
+            ),
+          ),
           child: Column(
 
             children: [
@@ -136,7 +143,13 @@ Widget progress = Container(
           ),
         ),
         Container(
-          color: Color(0xFFf45d27),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [const Color(0xFFFF8F00), const Color(0xFFFFc107)],
+            ),
+          ),
           child: Column(
             children: [
               Text(
@@ -164,6 +177,13 @@ Widget progress = Container(
 );
 // #About
 Widget text = Container(
+  decoration: BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: [const Color(0xFFFF8F00), const Color(0xFFFFc107)],
+    ),
+  ),
   padding:const EdgeInsets.all(20),
   child: new Center(
     child: new Column(
@@ -172,6 +192,7 @@ Widget text = Container(
           'Giving is the greatest act of grace.',
           softWrap: true,
           style: TextStyle(
+            color: Colors.white,
             fontSize: 30,
           ),
         )

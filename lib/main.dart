@@ -71,13 +71,15 @@ class MyHomePageState extends State<MyApp> {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Icon(
-                        Icons.attach_money,
-                      ),
+
                       SizedBox(width: 4),
                       Text(
                         "Donate Now",
-                      ),
+                          style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+
                     ],
                   ),
                 ), // Reset Button
@@ -104,6 +106,7 @@ Widget progress = Container(
                 softWrap: true,
                 style: TextStyle (
                   fontSize: 40,
+                  color: Colors.white,
                 ),
               ),
               Text(
@@ -111,6 +114,7 @@ Widget progress = Container(
                 softWrap: true,
                 style: TextStyle(
                   fontSize: 40,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -119,7 +123,7 @@ Widget progress = Container(
         SizedBox(
           width: 20,
           child: Divider(
-            color: Color(0xFFf45d27),
+            color: Colors.white,
             thickness: 20,
           ),
         ),
@@ -132,6 +136,7 @@ Widget progress = Container(
                 softWrap: true,
                 style: TextStyle(
                   fontSize: 40,
+                  color: Colors.white,
                 ),
               ),
               Text(
@@ -139,6 +144,7 @@ Widget progress = Container(
                 softWrap: true,
                 style: TextStyle(
                   fontSize: 40,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -155,10 +161,10 @@ Widget text = Container(
     child: new Column(
       children: <Widget>[
         Text(
-          'Quotes',
+          'Giving is the greatest act of grace.',
           softWrap: true,
           style: TextStyle(
-            fontSize: 40,
+            fontSize: 30,
           ),
         )
       ],

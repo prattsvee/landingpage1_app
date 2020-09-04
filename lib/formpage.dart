@@ -101,7 +101,7 @@ class _FormPageState extends State<FormPage> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 20.0,
-                                    color: Colors.white,
+
                                     fontWeight: FontWeight.bold)),
                           ),
                         ),

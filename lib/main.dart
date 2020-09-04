@@ -28,13 +28,13 @@ class MyHomePageState extends State<MyApp> {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20)),
+                  bottomLeft: Radius.circular(45),
+                  bottomRight: Radius.circular(45)),
             ),
             height: 300,
             child: Carousel(
               dotColor:  Color(0xFFf45d27),
-              dotBgColor: Colors.grey[200],
+              dotBgColor: Colors.white,
               autoplay: true,
               showIndicator: true,
               indicatorBgPadding: 0.1,
@@ -93,14 +93,19 @@ class MyHomePageState extends State<MyApp> {
 }
 
 Widget progress = Container(
-  padding: const EdgeInsets.all(20),
+  padding:const EdgeInsets.all(20),
+
   child: new Center(
     child: new Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Container(
+
           color: Color(0xFFf45d27),
           child: Column(
+
             children: [
+
               Text(
                 '25',
                 softWrap: true,
@@ -109,6 +114,7 @@ Widget progress = Container(
                   color: Colors.white,
                 ),
               ),
+
               Text(
                 'Projects \n Done',
                 softWrap: true,
@@ -117,14 +123,16 @@ Widget progress = Container(
                   color: Colors.white,
                 ),
               ),
+
             ],
           ),
         ),
         SizedBox(
           width: 20,
-          child: Divider(
+          child:VerticalDivider(
+
             color: Colors.white,
-            thickness: 20,
+            thickness: 40,
           ),
         ),
         Container(
@@ -156,7 +164,7 @@ Widget progress = Container(
 );
 // #About
 Widget text = Container(
-  padding: const EdgeInsets.all(20),
+  padding:const EdgeInsets.all(20),
   child: new Center(
     child: new Column(
       children: <Widget>[
@@ -167,6 +175,7 @@ Widget text = Container(
             fontSize: 30,
           ),
         )
+
       ],
     ),
   ),

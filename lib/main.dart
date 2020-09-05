@@ -53,35 +53,44 @@ class MyHomePageState extends State<MyApp> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 RaisedButton(
-                
-                  padding: EdgeInsets.only(
-                    left: 48,
-                    right: 48,
-                    top: 8,
-                    bottom: 8,
-                  ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => FormPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => FormPage()));
                   },
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
+                  textColor: Colors.white,
+                  padding: const EdgeInsets.all(0.0),
 
-                      SizedBox(width: 4),
-                      Text(
-                        "Donate Now",
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold)),
+                  child: Container(
 
-                    ],
+                    decoration: const BoxDecoration(
+
+                      gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: <Color>[
+                          Color(0xFFFF8F00), const Color(0xFFFFc107)
+                        ],
+                      ),
+                    ),
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.edit),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Donate now',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ],
+                    ),
                   ),
-                ), // Reset Button
+                ),
               ],
             ),
           ),
@@ -123,7 +132,7 @@ Widget progress = Container(
               ),
 
               Text(
-                'Projects \n Done',
+                'Projects \n ongoing',
                 softWrap: true,
                 style: TextStyle(
                   fontSize: 40,
